@@ -1,30 +1,54 @@
 {
   "expo": {
-    "name": "instaport-user",
-    "slug": "instaport-user",
+    "name": "InstaPort Delivery",
+    "slug": "instaport-delivery",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow InstaPort Delivery to use your location.",
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyCQb159dbqJypdIO1a1o0v_mNgM5eFqVAo"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.mrudulkolambe.instaportdelivery",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCQb159dbqJypdIO1a1o0v_mNgM5eFqVAo"
+        }
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7e320b11-b40f-4196-8609-2675b29f2200"
+      }
+    },
+    "owner": "mrudulkolambe"
   }
 }
